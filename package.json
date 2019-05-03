@@ -1,0 +1,30 @@
+{
+  "name": "MongoDB-Scrape",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azhelle16/MongoDB-Scrape.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/azhelle16/MongoDB-Scrape/issues"
+  },
+  "homepage": "https://github.com/azhelle16/MongoDB-Scrape#readme",
+  "dependencies": {
+    "axios": "0.18.0",
+    "body-parser": "1.18.3",
+    "cheerio": "1.0.0-rc.3",
+    "dotenv": "7.0.0",
+    "ejs": "2.6.1",
+    "express": "4.16.4",
+    "mongojs": "2.6.0",
+    "request": "2.88.0",
+    "require": "2.4.20"
+  }
+}

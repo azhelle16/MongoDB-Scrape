@@ -1,0 +1,46 @@
+<div id="mainContainer" class="py-5">
+	<span class="nsTitle mr-5">News</span>
+	<span class="nsTitle">Scraper</span>
+	<br>
+	<span class="nsTag">The Onion Edition</span>
+</div>
+<% if (news.length == 0) { %>
+	<script>
+		$(".scrape-link").hide()
+	</script>
+	<div id="articlesContainer" class="articles overflow-auto py-5">
+
+		<span class="noArt">No saved articles available. Save an article from the Home Page first.</span>
+	</div>
+<% } else { %> 
+		<div id="articlesDiv" class="overflow-auto pt-2">
+		
+			<% for (var j = 0; j < news.length; j++) { %>
+				<div class="container-fluid outerBorder mb-3">
+					<div class="row title py-2">
+						<div class="main col-7 text-truncate text-justify my-auto" title="<%=news[j].title.trim()%>">
+							<a href="<%=news[j].link.trim()%>" target="_blank"><%=news[j].title.trim()%></a>
+						</div>
+						<div class="col-5 save">
+							<div class="float-right">
+								<button class="btn redbtn btn-primary mr-3" id="<%= 'article-'+news[j]._id%>">Article Notes</button>
+								<button class="btn greybtn btn-secondary float-right" id="<%= 'delete-'+news[j]._id%>">Delete From Saved</button>
+							</div>
+						</div>
+					</div>
+					<div class="row py-2">
+						<div class="text-justify col">
+							<%=news[j].summary.trim()%>
+						</div>
+					</div>
+				</div>
+			<%	}	%>	
+			<script>
+				if ($(".scrape-link").is(":visible")) {
+					alertMsg("Alert "+<%= news.length%>+" Articles!")
+					$(".scrape-link").hide()
+				} 
+			</script>
+		</div>
+	<% } %>						
+</div>

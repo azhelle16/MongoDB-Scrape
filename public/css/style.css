@@ -1,0 +1,185 @@
+body {
+  font-family: 'Georgia', Times, Times New Roman, serif;
+  text-align: center;
+  margin: 0;
+  overflow: auto;
+  min-height: 100vh;
+}
+
+@font-face {
+  font-family: 'Vingy';
+  /*a name to be used later*/
+  src: url('../fonts/Vingy Normal.ttf');
+  /*URL to font*/
+}
+
+@font-face {
+  font-family: 'Copperplate';
+  /*a name to be used later*/
+  src: url('../fonts/Copperplate.ttc');
+  /*URL to font*/
+}
+
+/* NAVBAR */
+nav {
+  z-index: 2;
+}
+
+.navbar-brand {
+  cursor: pointer;
+}
+
+.navbar {
+  background-color: #FF5533;
+}
+
+.navbar a {
+  color: rgba(255, 255, 255, .6);
+  text-overflow:  ellipsis;
+  max-width: 200px;
+  word-break: break-all;
+}
+
+.active a {
+  color: #fff;
+}
+
+.navbar a:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
+a:not([href]):not([tabindex]) {
+  color: #fff;
+}
+
+a:not([href]):not([tabindex]):hover {
+  color: rgba(255, 255, 255, .5);
+  cursor: pointer;
+}
+
+div.dropdown-menu {
+  background-color: #FFF6BF;
+  opacity: 0.9;
+}
+
+.dispHide {
+  display: none;
+}
+/* MAIN CONTAINER */
+
+#mainContainer {
+  min-height: 75vh;
+  background-image: url("../images/nyt.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  font-family: "Vingy";
+}
+
+.nsTitle {
+  font-size: 150px;
+  color: white;
+  text-shadow: -1px -1px 0 #FF5533, 1px -1px 0 #FF5533, -1px 1px 0 #FF5533, 1px 1px 0 #FF5533;
+}
+
+.nsTag {
+  font-size: 60px;
+  color: white;
+  font-family: "Copperplate";
+}
+
+/* ARTICLES CONTAINER */
+
+.noArt {
+  font-size: 25px;
+  color: white;
+
+}
+
+#articlesContainer,
+.modal-header,
+#modalAlertBtn,
+#yesAlertBtn,
+#noAlertBtn,
+#saveArticleBtn,
+#closeArticleBtn  {
+  background-color: #FF5533;
+}
+
+.title {
+  background-color: #FF5533;
+  color: white;
+  cursor: pointer;
+}
+
+#articlesDiv .container {
+  width: 100%;
+}
+
+.save:hover, .main a:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.outerBorder {
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 95%;
+  box-shadow: 10px 10px 5px grey;
+}
+
+.main a {
+  color: white;
+}
+
+.redbtn {
+  background-color: #4f0000;
+  border: 2px solid #4f0000;
+  box-shadow: 5px 5px 5px #a30203;
+}
+
+.redbtn:hover {
+  background-color: #a30203;
+  border: 2px solid #a30203;
+  box-shadow: 5px 5px 5px #4f0000;
+}
+
+.greybtn {
+  box-shadow: 5px 5px 5px #a30203;
+}
+
+.greybtn:hover {
+  box-shadow: 5px 5px 5px #4f0000;
+}
+
+/* DIALOG BOX */
+
+.modal-header {
+  background-color: #FF5533;
+  color: white;
+}
+
+.modal-title  {
+  text-align: center;
+  width: 100%;
+}
+
+textarea {
+  resize: none;
+}
+
+#commentsTextArea span {
+  font-size: 12px;
+  color: grey;
+  float: left;
+}
+
+#commentsDiv p {
+  border: 2px solid grey;
+  box-shadow: 10px 10px 5px grey;
+  border-radius: 3px;
+}
+
+.fa-trash-alt {
+  cursor:pointer;
+}
