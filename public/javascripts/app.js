@@ -313,6 +313,13 @@ function showArticles(id, art) {
 function saveComments() {
 
 	var com = $("textarea").val()
+	if (com == "") {
+		$("#errorCnt").removeClass("dispHide")
+		return
+	} else {
+		$("#errorCnt").addClass("dispHide")
+	  }
+
 	$.ajax({
 	    url: '/addComments',
 	    method: 'POST',
