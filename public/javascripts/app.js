@@ -57,11 +57,37 @@ $(document).on("click","button",function() {
 			aid = ""
 		break;
 		case "save":
+			$("#textcount").text("255")
 			saveComments()
 		break;
 	}
 
 })
+
+$(document).on('keyup',function(event){
+
+	if ($("#articleModal").is(":visible")) {
+		//console.log(event.keyCode)
+		var cnt = parseInt($("#textcount").text())
+		if (((event.keyCode >= 65 && event.keyCode <= 90) || (event.keyCode >= 97 && event.keyCode <= 122) || event.keyCode == 32) && cnt >= 0) {
+			cnt--
+		} else if (event.keyCode == 8 && cnt <= 255) {
+			cnt++
+			if (cnt > 255)
+				cnt--
+		  }
+		$("#textcount").text(cnt)
+	}
+
+})
+
+$(document).on('paste',function(event){
+
+	if ($("#articleModal").is(":visible")) {
+		event.preventDefault()
+	}
+
+});
 
 /*
  #######################################################################
