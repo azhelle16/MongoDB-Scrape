@@ -27,7 +27,7 @@ var db
 
 // Hook mongojs configuration to the db variable
 if(process.env.MONGODB_URI) {
-	db = mongo.connect(process.env.MONGODB_URI);
+	db = mongoose.connect(process.env.MONGODB_URI);
 } else {
 	db = mongo(databaseUrl, collections);
 }
