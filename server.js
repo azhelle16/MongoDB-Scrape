@@ -23,9 +23,15 @@ app.set('view engine', 'ejs');
 // Database configuration
 var databaseUrl = "scraper";
 var collections = ["scrapedData"];
+var db 
 
 // Hook mongojs configuration to the db variable
-var db = mongo(databaseUrl, collections);
+if(process.env.MONGODB_URI) {
+	db = mongo.connect(process.env.MONGODB_URI);
+} else {
+	db = mongo(databaseUrl, collections);
+}
+	
 db.on("error", function(error) {
 	console.log("Database Error:", error);
 });
