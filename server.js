@@ -31,11 +31,12 @@ if(process.env.MONGODB_URI) {
 	db = mongoose.connect(process.env.MONGODB_URI);
 } else {
 	db = mongo(databaseUrl, collections);
+	db.on("error", function(error) {
+		console.log("Database Error:", error);
+	});
 }
 	
-db.on("error", function(error) {
-	console.log("Database Error:", error);
-});
+
 
 app.get("/", function(req,res) {
 	//res.render("pages/index")
