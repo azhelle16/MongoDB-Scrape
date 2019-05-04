@@ -25,6 +25,7 @@
     "express": "4.16.4",
     "mongojs": "2.6.0",
     "request": "2.88.0",
-    "require": "2.4.20"
+    "require": "2.4.20",
+    "mongoose": "5.5.5"
   }
 }
