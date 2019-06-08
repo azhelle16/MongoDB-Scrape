@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/azhelle16/MongoDB-Scrape#readme",
   "dependencies": {
-    "axios": "0.18.0",
     "body-parser": "1.18.3",
     "cheerio": "1.0.0-rc.3",
     "dotenv": "7.0.0",
